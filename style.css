@@ -1,0 +1,247 @@
+.home-hero {
+  min-height: 80vh;
+  padding: clamp(5rem, 12vw, 9rem) var(--pad);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background:
+    radial-gradient(
+      ellipse at 50% 65%,
+      rgba(31, 59, 47, 0.55),
+      transparent 65%
+    ),
+    var(--black);
+}
+
+.home-hero > .eyebrow {
+  color: var(--gold);
+  margin-bottom: 2rem;
+}
+
+.home-hero .hero-title {
+  letter-spacing: 0.06em;
+}
+
+.home-hero .script {
+  color: var(--gold);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  margin: 1.5rem 0;
+}
+
+.home-hero .rule {
+  width: min(100%, 650px);
+}
+
+.home-hero-description {
+  max-width: 520px;
+  margin-bottom: 2rem;
+}
+
+.hero-credit {
+  margin-top: 3rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+}
+
+/* Introduction */
+.home-intro {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: clamp(2rem, 8vw, 7rem);
+  align-items: center;
+  padding-top: clamp(5rem, 10vw, 9rem);
+  padding-bottom: clamp(5rem, 10vw, 9rem);
+}
+
+.home-intro-mark {
+  min-height: 380px;
+  border: 1px solid rgba(43, 42, 38, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.home-intro-mark span {
+  font-family: var(--font-heading);
+  font-size: clamp(7rem, 15vw, 12rem);
+  letter-spacing: 0.1em;
+}
+
+.home-intro-mark i {
+  width: 45%;
+  height: 1px;
+  background: var(--gold);
+  margin: 1rem 0;
+}
+
+.home-intro-mark .eyebrow {
+  font-size: 0.7rem;
+}
+
+.home-intro-copy {
+  max-width: 650px;
+}
+
+.home-intro-copy .eyebrow {
+  margin-bottom: 1rem;
+}
+
+.home-intro-copy p:not(.eyebrow):not(.script) {
+  margin-bottom: 1rem;
+}
+
+.home-intro-copy .script {
+  color: var(--green);
+  margin: 1.5rem 0;
+}
+
+.btn-dark {
+  color: var(--ink);
+  background: transparent;
+}
+
+.btn-dark:hover,
+.btn-dark:focus-visible {
+  background: var(--green);
+  color: var(--white);
+}
+
+/* Services */
+.home-services {
+  padding-top: clamp(5rem, 9vw, 8rem);
+  padding-bottom: clamp(5rem, 9vw, 8rem);
+}
+
+.home-services .eyebrow {
+  color: var(--gold);
+}
+
+.home-service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: var(--max);
+  margin: 3rem auto;
+}
+
+.home-service-card {
+  border-top: 1px solid var(--gold);
+  padding: 2rem 1rem;
+}
+
+.service-number {
+  color: var(--gold);
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+}
+
+.home-service-card .heading {
+  font-size: clamp(1.7rem, 3vw, 2.4rem);
+  margin: 1.5rem 0 1rem;
+}
+
+.home-service-card p {
+  font-size: 1rem;
+}
+
+/* Booking */
+.home-booking {
+  text-align: center;
+  padding-top: clamp(5rem, 10vw, 8rem);
+  padding-bottom: clamp(5rem, 10vw, 8rem);
+}
+
+.home-booking .eyebrow {
+  color: var(--gold);
+}
+
+.home-booking .heading {
+  margin: 1.25rem 0;
+}
+
+.home-booking > p:not(.eyebrow):not(.script) {
+  max-width: 550px;
+  margin: 0 auto 2rem;
+}
+
+.home-booking .script {
+  color: var(--gold);
+}
+
+/* Footer */
+.footer-tagline {
+  font-family: var(--font-script);
+  color: var(--gold);
+  font-size: 1.7rem;
+  margin-top: 1rem;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.footer-links .eyebrow,
+.footer-booking .eyebrow {
+  color: var(--gold);
+  margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.footer-links a:hover {
+  color: var(--gold);
+}
+
+.footer-booking {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+/* Responsive design */
+@media (max-width: 760px) {
+  .home-intro {
+    grid-template-columns: 1fr;
+  }
+
+  .home-intro-mark {
+    min-height: 260px;
+  }
+
+  .home-service-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .home-service-card {
+    padding: 1.5rem 0;
+  }
+
+  .footer-booking {
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-hero {
+    min-height: 70vh;
+  }
+
+  .home-hero .hero-title {
+    font-size: clamp(2.5rem, 13vw, 4rem);
+  }
+
+  .home-intro-mark {
+    min-height: 220px;
+  }
+}
